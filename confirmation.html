@@ -1,15 +1,32 @@
-<script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const product = urlParams.get("product");
-    const quantity = urlParams.get("quantity");
-    const total = urlParams.get("total");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation Page</title>
+</head>
+<body>
+    <h1>Confirmation Page</h1>
+    <div id="confirmation-container"></div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const product = urlParams.get("product");
+        const quantity = urlParams.get("quantity");
+        const total = urlParams.get("total");
 
-    const confirmationContainer = document.getElementById("confirmation-container");
-    confirmationContainer.innerHTML = `
-        <h2>Confirmation Page</h2>
-        <p>Product: ${product}</p>
-        <p>Quantity: ${quantity}</p>
-        <p>Total: ${total}</p>
-        <button onclick="confirmPurchase()">Confirm Purchase</button>
-    `;
-</script>
+        const confirmationContainer = document.getElementById("confirmation-container");
+        confirmationContainer.innerHTML = `
+            <h2>Confirmation Page</h2>
+            <p>Product: ${product}</p>
+            <p>Quantity: ${quantity}</p>
+            <p>Total: ${total}</p>
+            <button onclick="confirmPurchase()">Confirm Purchase</button>
+        `;
+
+        function confirmPurchase() {
+            // Add your confirmation logic here, such as sending another message to Discord or displaying a thank-you message.
+            alert("Purchase confirmed!");
+        }
+    </script>
+</body>
+</html>
