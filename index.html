@@ -30,6 +30,8 @@
             const purchaseData = `Product: ${product}\nQuantity: ${quantity}\nTotal: ${total}`;
 
             sendPurchaseToDiscord(purchaseData);
+            console.log(`Redirecting to confirmation page with URL: confirmation.html?product=${encodeURIComponent(product)}&quantity=${encodeURIComponent(quantity)}&total=${encodeURIComponent(total)}`);
+            window.location.href = `confirmation.html?product=${encodeURIComponent(product)}&quantity=${encodeURIComponent(quantity)}&total=${encodeURIComponent(total)}`;
 
             // Redirect to confirmation page with purchase data
             window.location.href = `confirmation.html?product=${encodeURIComponent(product)}&quantity=${encodeURIComponent(quantity)}&total=${encodeURIComponent(total)}`;
