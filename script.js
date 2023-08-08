@@ -5,12 +5,18 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
 
         const product = document.getElementById("product").value;
-        const quantity = document.getElementById("quantity").value;
+        const quantity = parseInt(document.getElementById("quantity").value);
+        
+        const product2 = document.getElementById("product2").value;
+        const quantity2 = parseInt(document.getElementById("quantity2").value);
+        
+        const product3 = document.getElementById("product3").value;
+        const quantity3 = parseInt(document.getElementById("quantity3").value);
+        
         const discordUsername = document.getElementById("discordUsername").value;
         const robloxUsername = document.getElementById("robloxUsername").value;
-        const total = document.getElementById("total").value;
 
-        const purchaseData = `Product: ${product}\nQuantity: ${quantity}\nDiscord Username: ${discordUsername}\nRoblox Username: ${robloxUsername}\nTotal: ${total}`;
+        const purchaseData = `Product: ${product}\nQuantity: ${quantity}\nProduct 2: ${product2}\nQuantity 2: ${quantity2}\nProduct 3: ${product3}\nQuantity 3: ${quantity3}\nDiscord Username: ${discordUsername}\nRoblox Username: ${robloxUsername}`;
 
         sendPurchaseToDiscord(purchaseData);
     });
