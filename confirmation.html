@@ -9,5 +9,27 @@
     <h1>Order Submitted Successfully!</h1>
     <p>Thank you for your purchase. Your order has been received and will be processed shortly.</p>
     <p>If you have any questions, please contact our customer support.</p>
+
+    <div id="purchase-details">
+        <h2>Your Purchase Details:</h2>
+        <p id="product">Product: </p>
+        <p id="quantity">Quantity: </p>
+        <p id="total">Total: </p>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const product = urlParams.get("product");
+        const quantity = urlParams.get("quantity");
+        const total = urlParams.get("total");
+
+        // Set the purchase details
+        document.getElementById("product").textContent = `Product: ${product}`;
+        document.getElementById("quantity").textContent = `Quantity: ${quantity}`;
+        document.getElementById("total").textContent = `Total: ${total}`;
+
+        // Clear the purchase data from local storage
+        localStorage.removeItem("purchaseHistory");
+    </script>
 </body>
 </html>
