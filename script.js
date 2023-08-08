@@ -6,9 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const product = document.getElementById("product").value;
         const quantity = document.getElementById("quantity").value;
+        const discordUsername = document.getElementById("discordUsername").value;
+        const robloxUsername = document.getElementById("robloxUsername").value;
         const total = document.getElementById("total").value;
 
-        const purchaseData = `Product: ${product}\nQuantity: ${quantity}\nTotal: ${total}`;
+        const purchaseData = `Product: ${product}\nQuantity: ${quantity}\nDiscord Username: ${discordUsername}\nRoblox Username: ${robloxUsername}\nTotal: ${total}`;
 
         sendPurchaseToDiscord(purchaseData);
     });
