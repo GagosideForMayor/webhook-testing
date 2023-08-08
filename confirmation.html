@@ -1,0 +1,15 @@
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const product = urlParams.get("product");
+    const quantity = urlParams.get("quantity");
+    const total = urlParams.get("total");
+
+    const confirmationContainer = document.getElementById("confirmation-container");
+    confirmationContainer.innerHTML = `
+        <h2>Confirmation Page</h2>
+        <p>Product: ${product}</p>
+        <p>Quantity: ${quantity}</p>
+        <p>Total: ${total}</p>
+        <button onclick="confirmPurchase()">Confirm Purchase</button>
+    `;
+</script>
