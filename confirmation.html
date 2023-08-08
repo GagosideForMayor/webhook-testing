@@ -25,27 +25,42 @@
 <body>
     <div class="content">
         <h1>Order Submitted Successfully!</h1>
-        <centre><p>Thank you for your purchase. Your order has been received and will be processed shortly.</p></centre>
-        <centre><p>If you have any questions, concerns, or additional information, we will be more than happy to help you!</p></centre>
-        <centre><p>Contact pooboy#4062 on discord or WETHEBESTMUSIC for customer support.</p></centre>
+        <p>Thank you for your purchase. Your order has been received and will be processed shortly.</p>
+        <p>If you have any questions, concerns, or additional information, we will be more than happy to help you!</p>
+        <p>Contact pooboy#4062 on Discord or WETHEBESTMUSIC for customer support.</p>
         <br>
         <div id="purchase-details">
             <h2>Your Purchase Details:</h2>
             <p id="product">Product: </p>
             <p id="quantity">Quantity: </p>
-            <p id="total">Total: </p>
+            <p id="product2">Product 2: </p>
+            <p id="quantity2">Quantity 2: </p>
+            <p id="product3">Product 3: </p>
+            <p id="quantity3">Quantity 3: </p>
+            <p id="discordUsername">Discord Username: </p>
+            <p id="robloxUsername">Roblox Username: </p>
         </div>
 
         <script>
             const urlParams = new URLSearchParams(window.location.search);
             const product = urlParams.get("product");
             const quantity = urlParams.get("quantity");
-            const total = urlParams.get("total");
+            const product2 = urlParams.get("product2");
+            const quantity2 = urlParams.get("quantity2");
+            const product3 = urlParams.get("product3");
+            const quantity3 = urlParams.get("quantity3");
+            const discordUsername = urlParams.get("discordUsername");
+            const robloxUsername = urlParams.get("robloxUsername");
 
             // Set the purchase details
-            document.getElementById("product").textContent = `Product: ${product}`;
-            document.getElementById("quantity").textContent = `Quantity: ${quantity}`;
-            document.getElementById("total").textContent = `Total: ${total}`;
+            document.getElementById("product").textContent = `Product 1: ${product}`;
+            document.getElementById("quantity").textContent = `Quantity 1: ${quantity}`;
+            document.getElementById("product2").textContent = `Product 2: ${product2}`;
+            document.getElementById("quantity2").textContent = `Quantity 2: ${quantity2}`;
+            document.getElementById("product3").textContent = `Product 3: ${product3}`;
+            document.getElementById("quantity3").textContent = `Quantity 3: ${quantity3}`;
+            document.getElementById("discordUsername").textContent = `Discord Username: ${discordUsername}`;
+            document.getElementById("robloxUsername").textContent = `Roblox Username: ${robloxUsername}`;
 
             // Clear the purchase data from local storage
             localStorage.removeItem("purchaseHistory");
