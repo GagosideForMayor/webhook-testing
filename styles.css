@@ -56,7 +56,8 @@ input[type="submit"] {
     border-radius: 4px;
 }
 
-input[type="submit"] {
+/* Add the custom button styles here */
+.custom-button {
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
@@ -67,7 +68,7 @@ input[type="submit"] {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-input[type="submit"]:hover {
+.custom-button:hover {
     background-color: #0056b3;
     transform: scale(1.05);
 }
