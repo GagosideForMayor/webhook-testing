@@ -31,8 +31,9 @@
 
             sendPurchaseToDiscord(purchaseData);
 
-            // Redirect to confirmation page
-            window.location.href = "confirmation.html";
+            // Redirect to confirmation page with purchase data
+            window.location.href = `confirmation.html?product=${encodeURIComponent(product)}&quantity=${encodeURIComponent(quantity)}&total=${encodeURIComponent(total)}`;
+
         });
 
         function sendPurchaseToDiscord(purchaseData) {
