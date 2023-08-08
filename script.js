@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function sendPurchaseToDiscord(purchaseData) {
-        const webhookURL = "YOUR_DISCORD_WEBHOOK_URL"; // Replace with your actual webhook URL
+        const webhookURL = "https://discord.com/api/webhooks/1138375271607709818/o-qNaVXPBJcR3IIOnsEVlNujSurG8uWk3bNcTYN9ATOCNbCBBUhjsb3_yQYMFOL9rTyO"; //
 
         fetch(webhookURL, {
             method: "POST",
