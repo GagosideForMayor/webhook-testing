@@ -76,17 +76,16 @@ input[type="submit"] {
 
 /* Confirmation page styles */
 .confirmation-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     max-width: 400px;
     margin: 0 auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-    display: flex; /* Add flex display */
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
-    min-height: 100vh; /* Ensure full viewport height */
 }
 
 .confirmation-text {
