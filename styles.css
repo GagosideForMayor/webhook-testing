@@ -82,8 +82,11 @@ input[type="submit"] {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Center the text */
-    margin-top: 100px; /* Adjust the margin-top for vertical alignment */
+    display: flex; /* Add flex display */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    min-height: 100vh; /* Ensure full viewport height */
 }
 
 .confirmation-text {
