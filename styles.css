@@ -26,8 +26,9 @@ body {
 
 h1 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin: 20px auto; /* Center horizontally */
     color: #333;
+    text-align: center; /* Center horizontally */
 }
 
 form {
