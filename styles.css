@@ -5,17 +5,6 @@
     box-sizing: border-box;
 }
 
-/* Set a background image for the body */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
-    background-image: url('https://raw.githubusercontent.com/GagosideForMayor/webhook-testing/main/confirmpage.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: white; /* Set text color to white */
-}
-
 /* Center content vertically and horizontally */
 .container {
     display: flex;
