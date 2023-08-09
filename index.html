@@ -1,83 +1,109 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Store</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Set a background color for the body */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            background-image: url('https://raw.githubusercontent.com/GagosideForMayor/webhook-testing/main/mainpage.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        /* Center content vertically and horizontally */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        /* Style the main content */
+        .content {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Our Virtual Store, update 6</h1>
-   <form id="purchase-form">
-    <label for="product">Product 1:</label>
-    <input type="text" id="product" required>
-    <label for="quantity">Quantity:</label>
-    <input type="number" id="quantity" required>
-    
-    <label for="product2">Product 2:</label>
-    <input type="text" id="product2" required>
-    <label for="quantity2">Quantity 2:</label>
-    <input type="number" id="quantity2" required>
-    
-    <label for="product3">Product 3:</label>
-    <input type="text" id="product3" required>
-    <label for="quantity3">Quantity 3:</label>
-    <input type="number" id="quantity3" required>
-    
-    <label for="discordUsername">Discord Username:</label>
-    <input type="text" id="discordUsername" required>
-    <label for="robloxUsername">Roblox Username:</label>
-    <input type="text" id="robloxUsername" required>
-    
-    <button type="submit" class="custom-button">Make Purchase</button>
-</form>
-    <script>
-    const form = document.getElementById("purchase-form");
+    <div class="container">
+        <div class="content">
+            <h1>Welcome to Our Virtual Store, update 6</h1>
+            <form id="purchase-form">
+                <label for="product">Product 1:</label>
+                <input type="text" id="product" required>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" required>
+                
+                <label for="product2">Product 2:</label>
+                <input type="text" id="product2" required>
+                <label for="quantity2">Quantity 2:</label>
+                <input type="number" id="quantity2" required>
+                
+                <label for="product3">Product 3:</label>
+                <input type="text" id="product3" required>
+                <label for="quantity3">Quantity 3:</label>
+                <input type="number" id="quantity3" required>
+                
+                <label for="discordUsername">Discord Username:</label>
+                <input type="text" id="discordUsername" required>
+                <label for="robloxUsername">Roblox Username:</label>
+                <input type="text" id="robloxUsername" required>
+                
+                <button type="submit" class="custom-button">Make Purchase</button>
+            </form>
+            <script>
+                const form = document.getElementById("purchase-form");
 
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault();
 
-        const product = document.getElementById("product").value;
-        const quantity = parseInt(document.getElementById("quantity").value);
-        const product2 = document.getElementById("product2").value;
-        const quantity2 = parseInt(document.getElementById("quantity2").value);
-        const product3 = document.getElementById("product3").value;
-        const quantity3 = parseInt(document.getElementById("quantity3").value);
-        const discordUsername = document.getElementById("discordUsername").value;
-        const robloxUsername = document.getElementById("robloxUsername").value;
+                    const product = document.getElementById("product").value;
+                    const quantity = parseInt(document.getElementById("quantity").value);
+                    const product2 = document.getElementById("product2").value;
+                    const quantity2 = parseInt(document.getElementById("quantity2").value);
+                    const product3 = document.getElementById("product3").value;
+                    const quantity3 = parseInt(document.getElementById("quantity3").value);
+                    const discordUsername = document.getElementById("discordUsername").value;
+                    const robloxUsername = document.getElementById("robloxUsername").value;
 
-        const purchaseData = `Product: ${product}\nQuantity: ${quantity}\nProduct 2: ${product2}\nQuantity 2: ${quantity2}\nProduct 3: ${product3}\nQuantity 3: ${quantity3}\nDiscord Username: ${discordUsername}\nRoblox Username: ${robloxUsername}`;
+                    const purchaseData = `Product: ${product}\nQuantity: ${quantity}\nProduct 2: ${product2}\nQuantity 2: ${quantity2}\nProduct 3: ${product3}\nQuantity 3: ${quantity3}\nDiscord Username: ${discordUsername}\nRoblox Username: ${robloxUsername}`;
 
-        sendPurchaseToDiscord(purchaseData);
+                    sendPurchaseToDiscord(purchaseData);
 
-        // Redirect to confirmation page with purchase data
-        console.log(`Redirecting to confirmation page with URL: confirmation.html?product=${encodeURIComponent(product)}&quantity=${encodeURIComponent(quantity)}&product2=${encodeURIComponent(product2)}&quantity2=${encodeURIComponent(quantity2)}&product3=${encodeURIComponent(product3)}&quantity3=${encodeURIComponent(quantity3)}&discordUsername=${encodeURIComponent(discordUsername)}&robloxUsername=${encodeURIComponent(robloxUsername)}`);
-        window.location.href = `confirmation.html?product=${encodeURIComponent(product)}&quantity=${encodeURIComponent(quantity)}&product2=${encodeURIComponent(product2)}&quantity2=${encodeURIComponent(quantity2)}&product3=${encodeURIComponent(product3)}&quantity3=${encodeURIComponent(quantity3)}&discordUsername=${encodeURIComponent(discordUsername)}&robloxUsername=${encodeURIComponent(robloxUsername)}`;
-    });
+                    // Redirect to confirmation page with purchase data
+                    console.log(`Redirecting to confirmation page with URL: confirmation.html?product=${encodeURIComponent(product)}&quantity=${encodeURIComponent(quantity)}&product2=${encodeURIComponent(product2)}&quantity2=${encodeURIComponent(quantity2)}&product3=${encodeURIComponent(product3)}&quantity3=${encodeURIComponent(quantity3)}&discordUsername=${encodeURIComponent(discordUsername)}&robloxUsername=${encodeURIComponent(robloxUsername)}`);
+                    window.location.href = `confirmation.html?product=${encodeURIComponent(product)}&quantity=${encodeURIComponent(quantity)}&product2=${encodeURIComponent(product2)}&quantity2=${encodeURIComponent(quantity2)}&product3=${encodeURIComponent(product3)}&quantity3=${encodeURIComponent(quantity3)}&discordUsername=${encodeURIComponent(discordUsername)}&robloxUsername=${encodeURIComponent(robloxUsername)}`;
+                });
 
-    function sendPurchaseToDiscord(purchaseData) {
-        const webhookURL = "https://discord.com/api/webhooks/1138375271607709818/o-qNaVXPBJcR3IIOnsEVlNujSurG8uWk3bNcTYN9ATOCNbCBBUhjsb3_yQYMFOL9rTyO";
+                function sendPurchaseToDiscord(purchaseData) {
+                    const webhookURL = "https://discord.com/api/webhooks/1138375271607709818/o-qNaVXPBJcR3IIOnsEVlNujSurG8uWk3bNcTYN9ATOCNbCBBUhjsb3_yQYMFOL9rTyO";
 
-        fetch(webhookURL, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                content: `New purchase:\n${purchaseData}`,
-            }),
-        })
-        .then(response => {
-            if (response.ok) {
-                console.log("Purchase information sent to Discord.");
-            } else {
-                console.error("Failed to send purchase information to Discord.");
-            }
-        })
-        .catch(error => {
-            console.error("An error occurred:", error);
-        });
-    }
-</script>
+                    fetch(webhookURL, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            content: `New purchase:\n${purchaseData}`,
+                        }),
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            console.log("Purchase information sent to Discord.");
+                        } else {
+                            console.error("Failed to send purchase information to Discord.");
+                        }
+                    })
+                    .catch(error => {
+                        console.error("An error occurred:", error);
+                    });
+                }
+            </script>
+        </div>
+    </div>
 </body>
 </html>
